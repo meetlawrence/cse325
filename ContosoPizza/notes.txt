@@ -1,0 +1,140 @@
+-- Evidence from the end of the module Create a web API with ASP.NET Core 
+controllers showing the existing pizzas and my additional pizza. 
+
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Thu, 05 Nov 2026 11:29:36 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+[
+  {
+    "id": 1,
+    "name": "Classic Italian",
+    "isGlutenFree": false
+  },
+  {
+    "id": 2,
+    "name": "Veggie",
+    "isGlutenFree": true
+  },
+  {
+    "id": 4,
+    "name": "Hawaiian Special",
+    "isGlutenFree": false
+  }
+]
+
+--For each operation (GET, POST, PUT, and DELETE), 
+the request I sent, the response I received, and the returned status code.
+------------------------------------------
+------------------------------------------
+GET {{ContosoPizza_HostAddress}}/pizza/1
+Accept: application/json
+
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Thu, 05 Nov 2026 11:46:22 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+{
+  "id": 1,
+  "name": "Classic Italian",
+  "isGlutenFree": false
+}
+-----------------------------------
+GET {{ContosoPizza_HostAddress}}/pizza/5
+Accept: application/json
+
+HTTP/1.1 404 Not Found
+Connection: close
+Content-Type: application/problem+json; charset=utf-8
+Date: Thu, 05 Nov 2026 11:46:51 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+{
+  "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
+  "title": "Not Found",
+  "status": 404,
+  "traceId": "00-cd3a7dcf2ec969616ad6d198ddedfbd7-7f3350c5e1225968-00"
+}
+----------------------------------------------
+----------------------------------------------
+POST {{ContosoPizza_HostAddress}}/pizza/
+Content-Type: application/json
+
+{
+    "name": "Hawaii",
+    "isGlutenFree": false
+}
+
+HTTP/1.1 201 Created
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Thu, 05 Nov 2026 11:47:31 GMT
+Server: Kestrel
+Location: http://localhost:5239/Pizza/5
+Transfer-Encoding: chunked
+
+{
+  "id": 5,
+  "name": "Hawaii",
+  "isGlutenFree": false
+}
+------------------------------------------------
+-------------------------------------------------
+PUT {{ContosoPizza_HostAddress}}/pizza/2
+Content-Type: application/json
+
+{
+    "id": 2,
+    "name": "Hawaiian Extra plus",
+    "isGlutenFree": false
+}
+
+HTTP/1.1 204 No Content
+Connection: close
+Date: Thu, 05 Nov 2026 11:52:31 GMT
+Server: Kestrel
+
+---------------------------------
+---------------------------------
+DELETE {{ContosoPizza_HostAddress}}/pizza/6
+HTTP/1.1 204 No Content
+Connection: close
+Date: Thu, 05 Nov 2026 11:53:40 GMT
+Server: Kestrel
+
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Thu, 05 Nov 2026 11:54:19 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+[
+  {
+    "id": 1,
+    "name": "Classic Italian",
+    "isGlutenFree": false
+  },
+  {
+    "id": 2,
+    "name": "Hawaiian Extra plus",
+    "isGlutenFree": false
+  },
+  {
+    "id": 4,
+    "name": "Hawaiian Special",
+    "isGlutenFree": false
+  },
+  {
+    "id": 5,
+    "name": "Hawaii",
+    "isGlutenFree": false
+  }
+]

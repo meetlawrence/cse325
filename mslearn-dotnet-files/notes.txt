@@ -1,0 +1,19 @@
+void GenerateSalesSummaryReport(Dictionary<string, double> salesDetails, double grandTotal, string outputDir)
+{
+    var reportPath = Path.Combine(outputDir, "sales-summary.txt");
+
+    using var writer = new StreamWriter(reportPath);
+    writer.WriteLine("Sales Summary");
+    writer.WriteLine("------------------------");
+    writer.WriteLine($"Total Sales: ${grandTotal:N2}");
+    writer.WriteLine();
+    writer.WriteLine("Details:");
+
+    foreach (var detail in salesDetails)
+    {
+        writer.WriteLine($"  {detail.Key}: ${detail.Value:N2}");
+    }
+
+    Console.WriteLine($"Sales summary report written to {reportPath}");
+}
+

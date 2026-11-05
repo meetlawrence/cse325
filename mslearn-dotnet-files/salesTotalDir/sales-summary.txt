@@ -1,0 +1,7 @@
+Sales Summary
+------------------------
+Total Sales: $2,012.20
+
+Details:
+  sales.json: $88.88
+  salestotals.json: $0.00
