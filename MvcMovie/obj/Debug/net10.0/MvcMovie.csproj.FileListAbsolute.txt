@@ -370,4 +370,4 @@ C:\Users\meetl\Desktop\codeBase\BYU\SoftwareDev\cse325\MvcMovie\bin\Debug\net10.
 C:\Users\meetl\Desktop\codeBase\BYU\SoftwareDev\cse325\MvcMovie\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\meetl\Desktop\codeBase\BYU\SoftwareDev\cse325\MvcMovie\obj\Debug\net10.0\MvcMovie.csproj.AssemblyReference.cache
 C:\Users\meetl\Desktop\codeBase\BYU\SoftwareDev\cse325\MvcMovie\obj\Debug\net10.0\MvcMovie.csproj.Up2Date
-C:\Users\meetl\Desktop\codeBase\BYU\SoftwareDev\cse325\MvcMovie\obj\Debug\net10.0\compressed\8151r5ozgn-{0}-f4pscrxm0z-f4pscrxm0z.gz
+C:\Users\meetl\Desktop\codeBase\BYU\SoftwareDev\cse325\MvcMovie\obj\Debug\net10.0\compressed\8151r5ozgn-{0}-ro5ypyr9w0-ro5ypyr9w0.gz

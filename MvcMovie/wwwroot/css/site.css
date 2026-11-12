@@ -44,10 +44,15 @@ input[type="date"],
 input[type="search"],
 select,
 textarea {
-  padding: 8px 12px;
+  
+  padding: 12px 16px;
   font-size: 1rem;
   border: 1px solid #ced4da;
   border-radius: 4px;
   box-sizing: border-box;
   margin-right: 5px;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
 }
